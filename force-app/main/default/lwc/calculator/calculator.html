@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Percentage Calculator" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Enter a number" type="number" value={number} onchange={handleNumberChange}></lightning-input>
+            <lightning-combobox label="Select percentage"
+                                value={percentage}
+                                placeholder="Select a percentage"
+                                options={percentageOptions}
+                                onchange={handlePercentageChange}>
+            </lightning-combobox>
+            <lightning-button label="Calculate" onclick={calculatePercentage} class="slds-m-top_medium"></lightning-button>
+            <template if:true={resultVisible}>
+                <p class="slds-m-top_medium">Result: {result}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
