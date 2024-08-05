@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Inv_Sales_Commission__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>if the commission has already been generated (True), if the commission was not generated (False)</description>
+    <inlineHelpText>if the commission has already been generated (True), if the commission was not generated (False)</inlineHelpText>
+    <label>Generate Inv Sales Commission?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Reason__c</fullName>
+    <label>Cost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Error en comunicacion con Nuage</fullName>
+                <default>false</default>
+                <label>Error en comunicacion con Nuage</label>
+            </value>
+            <value>
+                <fullName>Error en comunicacion Interna</fullName>
+                <default>false</default>
+                <label>Error en comunicacion Interna</label>
+            </value>
+            <value>
+                <fullName>Estimacion de la tarea para el cliente</fullName>
+                <default>false</default>
+                <label>Estimacion de la tarea para el cliente</label>
+            </value>
+            <value>
+                <fullName>Junior Dev</fullName>
+                <default>false</default>
+                <label>Junior Dev</label>
+            </value>
+            <value>
+                <fullName>Mala estimacion de horas</fullName>
+                <default>false</default>
+                <label>Mala estimacion de horas</label>
+            </value>
+            <value>
+                <fullName>Reunión duplicada</fullName>
+                <default>false</default>
+                <label>Reunión duplicada</label>
+            </value>
+            <value>
+                <fullName>Rework por error de desarrollo</fullName>
+                <default>false</default>
+                <label>Rework por error de desarrollo</label>
+            </value>
+            <value>
+                <fullName>Negotiation with Nuage</fullName>
+                <default>false</default>
+                <label>Negotiation with Nuage</label>
+            </value>
+            <value>
+                <fullName>SaltClick</fullName>
+                <default>false</default>
+                <label>SaltClick</label>
+            </value>
+            <value>
+                <fullName>Banjaxed</fullName>
+                <default>false</default>
+                <label>Banjaxed</label>
+            </value>
+            <value>
+                <fullName>Doctors Now LLC</fullName>
+                <default>false</default>
+                <label>Doctors Now LLC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

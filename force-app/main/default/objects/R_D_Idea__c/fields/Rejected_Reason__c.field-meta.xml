@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Reason__c</fullName>
+    <label>Rejected Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Unknown problem to solve</fullName>
+                <default>false</default>
+                <label>Unknown problem to solve</label>
+            </value>
+            <value>
+                <fullName>Market to small</fullName>
+                <default>false</default>
+                <label>Market to small</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Too much effort &amp; risk</fullName>
+                <default>false</default>
+                <label>Too much effort &amp; risk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

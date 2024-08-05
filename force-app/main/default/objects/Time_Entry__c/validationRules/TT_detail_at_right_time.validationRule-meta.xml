@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_detail_at_right_time</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( TODAY() - Start_Date__c &gt;= 2, true, false ) &amp;&amp;
+NOT(ISCHANGED(Account_Fixed_Monthly_Revenue__c) ||
+ISCHANGED( Revenue__c ) ||
+ISCHANGED( Notes__c ) ||
+ISCHANGED( Cost__c ) ||
+ISCHANGED( Invoice_Flag__c ) ||
+ISCHANGED( Invoice__c ) ||
+ISCHANGED(Account__c)) &amp;&amp; $Profile.Name != &apos;System Administrator&apos; &amp;&amp; $Profile.Name != &apos;Platform Admin&apos; &amp;&amp; $Profile.Name != &apos;SysAdmin Developer&apos; &amp;&amp; NOT(ISCHANGED( Reviewed__c ))</errorConditionFormula>
+    <errorDisplayField>Start_Timestamp__c</errorDisplayField>
+    <errorMessage>You can’t insert Time Entry for a date after 48 hours have passed. If you have to log time for previous dates please contact your supervisor.</errorMessage>
+</ValidationRule>

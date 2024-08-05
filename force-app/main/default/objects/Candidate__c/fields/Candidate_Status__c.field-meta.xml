@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Status__c</fullName>
+    <inlineHelpText>Unqualified: For candidates who do not meet the requirements - 
+New: Newly added candidates, not yet evaluated - 
+On hold: Process temporarily paused, for example, due to changes in priorities - 
+Qualified: They have passed the initial evaluation and meet the basic requirements - 
+Screening: Pending a Qualification Interview - 
+Technical Test: Carrying out technical tests necessary for the position - 
+Interviewing: In interviews, after passing the technical test - 
+Referrals: Awaiting for referrals</inlineHelpText>
+    <label>Candidate Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Candidate_Status</valueSetName>
+    </valueSet>
+</CustomField>

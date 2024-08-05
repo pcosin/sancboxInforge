@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Bill_Amount_fixed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When clicking the Process Invoice button, whether to change the Total Bill Amount or leave it as it is. If checked the Total Bill Amount won&apos;t change.</inlineHelpText>
+    <label>Total Bill Amount fixed?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL_must_be_linkedin</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( 
+   OR(
+      BEGINS(LinkedIn_URL__c, &quot;https://www.linkedin&quot;),
+						ISBLANK(LinkedIn_URL__c)
+   )
+)</errorConditionFormula>
+    <errorDisplayField>LinkedIn_URL__c</errorDisplayField>
+    <errorMessage>The URL must be linkedIn</errorMessage>
+</ValidationRule>

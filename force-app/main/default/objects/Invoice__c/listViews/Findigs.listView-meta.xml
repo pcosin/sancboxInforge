@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Findigs</fullName>
+    <columns>NAME</columns>
+    <columns>Invoice_Date__c</columns>
+    <columns>Invoice_Number__c</columns>
+    <columns>Actual_Billable_Hours__c</columns>
+    <columns>Billed_Hourly_Rate_Billed_Hours__c</columns>
+    <columns>Billed_Hourly_Rate_Total_Hours__c</columns>
+    <columns>Cost__c</columns>
+    <columns>Billing_Account__c</columns>
+    <columns>Quickbooks_Amount__c</columns>
+    <columns>Total_Bill_Amount__c</columns>
+    <columns>Total_Billable_Hours__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_Account__c</field>
+        <operation>contains</operation>
+        <value>Findigs</value>
+    </filters>
+    <label>Findigs</label>
+</ListView>

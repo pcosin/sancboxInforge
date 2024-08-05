@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes_Are_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>(ISBLANK( Notes__c ) || Notes__c = &quot;Check in: , Checkout:&quot; || Notes__c = &quot;Check in:&quot; || Notes__c = &quot;Check in:, Checkout:&quot;) &amp;&amp; (CreatedDate &gt;= DATETIMEVALUE(&quot;2023-05-25 00:00:00&quot;) || ISNEW())</errorConditionFormula>
+    <errorDisplayField>Notes__c</errorDisplayField>
+    <errorMessage>Please enter the Notes that describe the time entry.</errorMessage>
+</ValidationRule>

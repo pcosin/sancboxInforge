@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_detail_requires_Task_or_Case</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Case__c ) &amp;&amp; ISBLANK( Task__c ) &amp;&amp; $Profile.Name != &apos;Platform Admin&apos; &amp;&amp;  Name != &apos;SaltClick Time&apos; &amp;&amp; Name != &apos;ASC Time&apos; &amp;&amp; CreatedDate &gt;= DATETIMEVALUE(&quot;2023-04-01 00:00:00&quot;)</errorConditionFormula>
+    <errorMessage>There is no Case or Task on this TT Detail.</errorMessage>
+</ValidationRule>

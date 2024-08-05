@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_reason_reqrd_if_status_rejected</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Status__c)=&apos;Rejected&apos; &amp;&amp; ISBLANK(TEXT(Rejected_Reason__c))</errorConditionFormula>
+    <errorDisplayField>Rejected_Reason__c</errorDisplayField>
+    <errorMessage>Rejected Reason is required if status is Rejected.</errorMessage>
+</ValidationRule>

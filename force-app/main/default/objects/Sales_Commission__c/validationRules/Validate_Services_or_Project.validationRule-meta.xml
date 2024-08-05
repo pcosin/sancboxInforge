@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Services_or_Project</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Services_Account__c) &amp;&amp; ISBLANK(Opportunity_Project__c) || 
+AND(
+  NOT(ISBLANK(Services_Account__c)),
+  NOT(ISBLANK(Opportunity_Project__c))
+)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>You must fill either Services Account or Opportunity Project, but not both.</errorMessage>
+</ValidationRule>

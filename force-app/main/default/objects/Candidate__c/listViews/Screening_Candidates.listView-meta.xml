@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Screening_Candidates</fullName>
+    <columns>NAME</columns>
+    <columns>Salary_Range__c</columns>
+    <columns>Skills__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Candidate_Status__c</field>
+        <operation>equals</operation>
+        <value>Screening</value>
+    </filters>
+    <label>Screening Candidates</label>
+</ListView>
