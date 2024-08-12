@@ -22,4 +22,3 @@ trigger SendEmailOnOpportunityClosedWon on Opportunity (after update) {
         Messaging.sendEmail(emails);
     }
 }
-

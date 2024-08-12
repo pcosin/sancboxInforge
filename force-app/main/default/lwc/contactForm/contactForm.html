@@ -1,13 +1,46 @@
+<!-- contactForm.html -->
 <template>
-    <lightning-card title="Create Contact" icon-name="standard:contact">
-        <div class="slds-p-around_medium">
-            <lightning-input label="First Name" value={firstName} onchange={handleInputChange} data-field="firstName"></lightning-input>
-            <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-field="lastName" required></lightning-input>
-            <lightning-input label="Email" value={email} onchange={handleInputChange} data-field="email"></lightning-input>
-            <lightning-input label="Phone" value={phone} onchange={handleInputChange} data-field="phone"></lightning-input>
-            <lightning-input label="Account ID" value={accountId} onchange={handleInputChange} data-field="accountId"></lightning-input>
-            <lightning-textarea label="Description" value={description} onchange={handleInputChange} data-field="description"></lightning-textarea>
-            <lightning-button label="Submit" onclick={handleSubmit} class="slds-m-top_medium"></lightning-button>
+    <div class="slds-card slds-p-around_medium">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">Create New Contact</h2>
+        <lightning-input 
+            label="Account Name" 
+            name="AccountName" 
+            value={contact.AccountName} 
+            onchange={handleInputChange}>
+        </lightning-input>
+        <lightning-input 
+            label="First Name" 
+            name="FirstName" 
+            value={contact.FirstName} 
+            onchange={handleInputChange}>
+        </lightning-input>
+        <lightning-input 
+            label="Last Name" 
+            name="LastName" 
+            value={contact.LastName} 
+            required 
+            onchange={handleInputChange}>
+        </lightning-input>
+        <lightning-input 
+            type="tel" 
+            label="Phone" 
+            name="Phone" 
+            value={contact.Phone} 
+            onchange={handleInputChange}>
+        </lightning-input>
+        <lightning-input 
+            type="email" 
+            label="Email" 
+            name="Email" 
+            value={contact.Email} 
+            onchange={handleInputChange}>
+        </lightning-input>
+        <div class="slds-m-top_medium">
+            <lightning-button 
+                variant="brand" 
+                label="Submit" 
+                onclick={handleSubmit}>
+            </lightning-button>
         </div>
-    </lightning-card>
+    </div>
 </template>

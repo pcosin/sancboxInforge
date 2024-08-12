@@ -1,66 +1,49 @@
-import { LightningElement } from 'lwc';
+// contactForm.js
+import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { createRecord } from 'lightning/uiRecordApi';
-import CONTACT_OBJECT from '@salesforce/schema/Contact';
-import FIRST_NAME_FIELD from '@salesforce/schema/Contact.FirstName';
-import LAST_NAME_FIELD from '@salesforce/schema/Contact.LastName';
-import EMAIL_FIELD from '@salesforce/schema/Contact.Email';
-import PHONE_FIELD from '@salesforce/schema/Contact.Phone';
-import DESCRIPTION_FIELD from '@salesforce/schema/Contact.Description';
-import ACCOUNT_ID_FIELD from '@salesforce/schema/Contact.AccountId';
+import createContact from '@salesforce/apex/ContactController.createContact';
 
 export default class ContactForm extends LightningElement {
-    firstName = '';
-    lastName = '';
-    email = '';
-    phone = '';
-    accountId = '';
-    description = '';
+    @track contact = {
+        AccountName: '',
+        FirstName: '',
+        LastName: '',
+        Phone: '',
+        Email: ''
+    };
 
     handleInputChange(event) {
-        const field = event.target.dataset.field;
-        this[field] = event.target.value;
+        const field = event.target.name;
+        this.contact[field] = event.target.value;
     }
 
     handleSubmit() {
-        const fields = {};
-        fields[FIRST_NAME_FIELD.fieldApiName] = this.firstName;
-        fields[LAST_NAME_FIELD.fieldApiName] = this.lastName;
-        fields[EMAIL_FIELD.fieldApiName] = this.email;
-        fields[PHONE_FIELD.fieldApiName] = this.phone;
-        fields[ACCOUNT_ID_FIELD.fieldApiName] = this.accountId;
-        fields[DESCRIPTION_FIELD.fieldApiName] = this.description;
-
-        const recordInput = { apiName: CONTACT_OBJECT.objectApiName, fields };
-
-        createRecord(recordInput)
-            .then(contact => {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Success',
-                        message: 'Contact created successfully',
-                        variant: 'success',
-                    }),
-                );
+        createContact({ contactData: this.contact })
+            .then(() => {
+                this.showToast('Success', 'Contact created successfully', 'success');
                 this.resetForm();
             })
             .catch(error => {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Error creating contact',
-                        message: error.body.message,
-                        variant: 'error',
-                    }),
-                );
+                this.showToast('Error', error.body.message, 'error');
             });
     }
 
     resetForm() {
-        this.firstName = '';
-        this.lastName = '';
-        this.email = '';
-        this.phone = '';
-        this.accountId = '';
-        this.description = '';
+        this.contact = {
+            AccountName: '',
+            FirstName: '',
+            LastName: '',
+            Phone: '',
+            Email: ''
+        };
+    }
+
+    showToast(title, message, variant) {
+        const event = new ShowToastEvent({
+            title: title,
+            message: message,
+            variant: variant
+        });
+        this.dispatchEvent(event);
     }
 }

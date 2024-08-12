@@ -7,7 +7,7 @@ public class ContactHandlerClass {
             Messaging.SingleEmailMessage emailMsg = new Messaging.SingleEmailMessage();
             String[] toAddress = new String[]{'pcosin@gmail.com'};
             emailMsg.setToAddresses(toAddress);
-            String emailSub = 'Welcome ' + 'Pablo';
+            String emailSub = 'Welcome ' + 'Juan';
             emailMsg.setSubject(emailSub);    
             lstEmail.add(emailMsg);
         }
